@@ -26,12 +26,11 @@
 
 ## SQL-скрипт для создания агрегированной таблицы данных
 
-Следующий SQL-скрипт использовался для создания итоговой таблицы aggregated_digital_ads.
+Следующий SQL-скрипт использовался для создания итоговой таблицы aggregated_paid_ads.
 
 ```sql
 USE digital_marketing;
-
-CREATE TABLE aggregated_digital_ads
+CREATE TABLE aggregated_paid_ads
 WITH
 FacebookAds AS (
     SELECT
@@ -92,7 +91,7 @@ GROUP BY
 ORDER BY
     ads.ad_date,
     ads.source,
-    total_spend DESC;
+    total_spend DESC
 ```
 
 ---
@@ -106,8 +105,8 @@ ORDER BY
 ```dax
 CTR = 
 DIVIDE(
-   SUM('aggregated_digital_ads'[Clicks]),
-    SUM('aggregated_digital_ads'[Impressions]),
+   SUM('aggregated_paid_ads'[Clicks]),
+    SUM('aggregated_paid_ads'[Impressions]),
     0
 )
 ```
@@ -117,8 +116,8 @@ DIVIDE(
 ```dax
 CPI = 
 DIVIDE(
-    SUM('aggregated_digital_ads'[Spend]),
-    SUM('aggregated_digital_ads'[Installs]),
+    SUM('aggregated_paid_ads'[Spend]),
+    SUM('aggregated_paid_ads'[Installs]),
     BLANK()
 )
 ```
@@ -128,8 +127,8 @@ DIVIDE(
 ```dax
 ROAS_D1 = 
 DIVIDE(
-    SUM('aggregated_digital_ads'[D1 Revenue]),
-    SUM('aggregated_digital_ads'[Spend]),
+    SUM('aggregated_paid_ads'[D1 Revenue]),
+    SUM('aggregated_paid_ads'[Spend]),
     BLANK()
 )
 ```
@@ -139,8 +138,8 @@ DIVIDE(
 ```dax
 ROAS_D7 = 
 DIVIDE(
-    SUM('aggregated_digital_ads'[D7 Revenue]),
-    SUM('aggregated_digital_ads'[Spend]),
+    SUM('aggregated_paid_ads'[D7 Revenue]),
+    SUM('aggregated_paid_ads'[Spend]),
     BLANK()
 )
 ```
@@ -150,8 +149,8 @@ DIVIDE(
 ```dax
 CPC = 
 DIVIDE(
-    SUM('aggregated_digital_ads'[Spend]), 
-    SUM('aggregated_digital_ads'[Clicks]), 
+    SUM('aggregated_paid_ads'[Spend]), 
+    SUM('aggregated_paid_ads'[Clicks]), 
     BLANK()
 )
 ```
@@ -161,8 +160,8 @@ DIVIDE(
 ```dax
 CPM = 
 DIVIDE(
-    SUM('aggregated_digital_ads'[Spend]), 
-    SUM('aggregated_digital_ads'[Impressions]), 
+    SUM('aggregated_paid_ads'[Spend]), 
+    SUM('aggregated_paid_ads'[Impressions]), 
     BLANK()
 ) * 1000
 ```

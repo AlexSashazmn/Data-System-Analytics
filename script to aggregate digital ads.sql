@@ -1,5 +1,5 @@
 USE digital_marketing;
-CREATE TABLE aggregated_digital_ads
+CREATE TABLE aggregated_paid_ads
 WITH
 FacebookAds AS (
     SELECT
@@ -35,7 +35,7 @@ MMPData AS (
         installs,
         d1_revenue,
         d7_revenue
-    FROM mmp_adjust_appsflyer_last
+    FROM mmp_last
 )
 SELECT
     ads.ad_date,

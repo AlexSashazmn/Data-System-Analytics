@@ -65,7 +65,7 @@ CPM = DIVIDE(SUM('aggregated_paid_ads'[Spend]), SUM('aggregated_paid_ads'[Impres
 
 - **Обзор**: ключевые KPI и тренды  
 - **Google Ads**: детальная эффективность кампаний со спарклайнами  
-- **Meta Ads**: детальная эффективность кампаний со спарклайнами  
+- **Facebook Ads**: детальная эффективность кампаний со спарклайнами  
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/62212e6b-0193-4501-8aca-17cae945af44" width="33%" />

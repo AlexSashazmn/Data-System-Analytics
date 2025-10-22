@@ -1,0 +1,7 @@
+# Power BI
+*.pbilock
+
+# Python
+__pycache__/
+*.pyc
+.venv/

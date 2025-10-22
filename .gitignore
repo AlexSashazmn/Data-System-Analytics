@@ -4,4 +4,22 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 .venv/
+.env/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# PyCharm / JetBrains
+.idea/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db

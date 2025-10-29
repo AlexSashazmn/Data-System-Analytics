@@ -1,3 +1,5 @@
+[English version](TASK3_DASHBOARD_OVERVIEW.en.md)
+
 # Задача 3: Дашборд в Power BI
 
 ## Обзор проекта

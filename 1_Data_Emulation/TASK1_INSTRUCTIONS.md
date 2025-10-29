@@ -1,3 +1,4 @@
+[English version](TASK1_INSTRUCTIONS.en.md)
 ### Задача 1: Сбор и эмуляция данных
 
 В этой директории находится Python‑скрипт **`synthet_ads_mmp.py`**, который генерирует три CSV‑файла:
